@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<title>The Warm-Up — WorldFirst pre-match campaign</title>
+<title>The Warm-Up — WorldFirst UK campaign</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800;900&display=swap" rel="stylesheet">
 <style>
@@ -15,64 +15,76 @@
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-snap-type:y mandatory;scroll-behavior:smooth}
 body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:var(--ink);background:var(--paper)}
-.slide{min-height:100vh;scroll-snap-align:start;display:flex;align-items:center;position:relative;overflow:hidden;padding:64px 7vw}
-.wrap{max-width:1080px;margin:0 auto;width:100%}
-.kicker{font-size:13px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:var(--grey);margin-bottom:18px}
-h1{font-size:clamp(40px,6.4vw,88px);line-height:1.0;font-weight:900;letter-spacing:-.02em}
-h2{font-size:clamp(30px,4.2vw,52px);line-height:1.05;font-weight:900;letter-spacing:-.02em;margin-bottom:26px}
-h3{font-size:18px;font-weight:800;margin-bottom:8px}
-p.lead{font-size:clamp(17px,1.6vw,21px);line-height:1.55;color:var(--grey);max-width:58ch}
-.num{position:absolute;top:26px;right:7vw;font-size:12px;font-weight:800;letter-spacing:.18em;color:#B9BFC9}
-.split{position:absolute;inset:0;z-index:-1}
-.split::before,.split::after{content:"";position:absolute;top:0;bottom:0;width:6px}
-.split::before{left:0;background:var(--europe)}
-.split::after{right:0;background:var(--world)}
-.chip{display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding:5px 11px;border-radius:100px;white-space:nowrap;margin-bottom:12px}
+.slide{min-height:100vh;scroll-snap-align:start;display:flex;align-items:center;position:relative;overflow:hidden;padding:72px 7vw}
+.wrap{max-width:1120px;margin:0 auto;width:100%;position:relative;z-index:2}
+.ghost{position:absolute;right:2vw;bottom:-2vw;font-size:26vw;font-weight:900;color:rgba(11,18,32,.04);line-height:1;z-index:1;user-select:none}
+.dark .ghost{color:rgba(255,255,255,.04)}
+.kicker{font-size:12px;font-weight:800;letter-spacing:.26em;text-transform:uppercase;color:var(--grey);margin-bottom:20px;display:flex;align-items:center;gap:12px}
+.kicker::before{content:"";width:34px;height:2px;background:var(--wf)}
+h1{font-size:clamp(44px,7vw,96px);line-height:.98;font-weight:900;letter-spacing:-.025em}
+h2{font-size:clamp(30px,4.4vw,54px);line-height:1.04;font-weight:900;letter-spacing:-.02em;margin-bottom:24px}
+h3{font-size:17px;font-weight:800;margin-bottom:8px}
+p.lead{font-size:clamp(17px,1.55vw,20px);line-height:1.6;color:var(--grey);max-width:58ch}
+.num{position:absolute;top:28px;right:7vw;font-size:11px;font-weight:800;letter-spacing:.2em;color:#B9BFC9;z-index:3}
+.strip{position:absolute;left:0;right:0;bottom:0;height:44px;display:flex;align-items:center;justify-content:space-between;padding:0 7vw;font-size:10.5px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:#B9BFC9;border-top:1px solid var(--line);z-index:3;background:inherit}
+.dark .strip{border-top-color:#1E2A40;color:#3A4250}
+.chip{display:inline-flex;align-items:center;font-size:10.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding:5px 11px;border-radius:100px;white-space:nowrap;margin-bottom:12px}
 .chip.pink{background:var(--wf);color:#fff}
 .chip.blue{background:#E8EFFB;color:var(--europe)}
 .chip.red{background:#FBEAEA;color:var(--world)}
 .chip.grey{background:#EDF0F4;color:#39414E}
+.chip.draft{background:#FFF3E8;color:#9A4B00}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:22px}
 .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.card{background:var(--soft);border:1px solid var(--line);border-radius:16px;padding:22px 24px}
-.card p{font-size:15px;line-height:1.55;color:var(--grey)}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.card{background:var(--soft);border:1px solid var(--line);border-radius:18px;padding:24px 26px}
+.card p{font-size:15px;line-height:1.6;color:var(--grey)}
 .card ul{margin:8px 0 0 18px}
-.card li{font-size:15px;line-height:1.6;color:#39414E;margin-bottom:6px}
+.card li{font-size:15px;line-height:1.65;color:#39414E;margin-bottom:7px}
+.dark{background:var(--ink);color:#fff}
+.dark .kicker{color:#8B93A1}
+.dark p.lead{color:#B7BDC9}
+.dark .card{background:#111A2B;border-color:#1E2A40}
+.dark .card p,.dark .card li{color:#B7BDC9}
+.dark h3{color:#fff}
 .tbl{width:100%;border-collapse:collapse;margin-top:6px}
-.tbl th{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--grey);text-align:left;padding:10px 14px;border-bottom:2px solid var(--ink)}
-.tbl td{font-size:15px;line-height:1.5;padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+.tbl th{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--grey);text-align:left;padding:10px 14px;border-bottom:2px solid var(--ink)}
+.tbl td{font-size:15px;line-height:1.5;padding:13px 14px;border-bottom:1px solid var(--line);vertical-align:top}
 .tbl td:first-child{font-weight:700}
 .rec{background:#FFF5F8}
-.bigline{font-size:clamp(28px,4.4vw,54px);font-weight:900;line-height:1.1;letter-spacing:-.02em;margin:24px 0}
-.bigline .eu{color:var(--europe)}.bigline .w{color:var(--world)}.bigline .pink{color:var(--wf)}
-.foot{margin-top:30px;font-size:13px;color:#9AA1AC}
+.foot{margin-top:28px;font-size:13px;color:#9AA1AC;line-height:1.6}
 .dots{position:fixed;right:18px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:9px;z-index:50}
 .dots a{width:8px;height:8px;border-radius:50%;background:#D4D8DF;transition:.2s}
 .dots a.on{background:var(--wf);transform:scale(1.35)}
 .bar{position:fixed;top:0;left:0;height:4px;background:linear-gradient(90deg,var(--europe),var(--wf),var(--world));width:0;z-index:60;transition:width .15s}
-.dark{background:var(--ink);color:#fff}
-.dark .kicker{color:#8B93A1}
-.dark p.lead{color:#B7BDC9}
-.dark .num{color:#3A4250}
-.dark .card{background:#111A2B;border-color:#1E2A40}
-.dark .card p,.dark .card li{color:#B7BDC9}
-.dark h3{color:#fff}
-.trow{display:grid;grid-template-columns:190px 1fr;gap:18px;padding:15px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.trow{display:grid;grid-template-columns:180px 1fr;gap:18px;padding:15px 0;border-bottom:1px solid var(--line);align-items:baseline}
 .trow .when{font-weight:900;font-size:16px}
-.trow .what{font-size:15.5px;line-height:1.55;color:#39414E}
+.trow .what{font-size:15.5px;line-height:1.6;color:#39414E}
 .trow .what b{color:var(--ink)}
 .hot{color:var(--world);font-weight:800}
-.cast{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:8px}
-.cast .card{text-align:left}
-.cast .role{font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:800;color:var(--wf);margin-bottom:8px}
-.note{font-size:12.5px;color:#9AA1AC;margin-top:14px;line-height:1.5}
-@media(max-width:860px){
-  .grid2,.grid3,.cast{grid-template-columns:1fr}
-  .slide{padding:56px 6vw}
+/* image drop-in slots */
+.ph{position:relative;border:2px dashed #C9CFD8;border-radius:18px;background:repeating-linear-gradient(45deg,#FAFBFC,#FAFBFC 12px,#F3F5F8 12px,#F3F5F8 24px);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.ph .tag{position:absolute;top:12px;left:12px;background:var(--ink);color:#fff;font-size:10.5px;font-weight:800;letter-spacing:.14em;padding:4px 10px;border-radius:100px}
+.ph .cap{font-size:12.5px;color:#8B93A1;text-align:center;padding:0 18px;line-height:1.5;max-width:34ch}
+.dark .ph{border-color:#2A3650;background:repeating-linear-gradient(45deg,#0E1626,#0E1626 12px,#121B2E 12px,#121B2E 24px)}
+.dark .ph .tag{background:var(--wf)}
+.r169{aspect-ratio:16/9}
+.r34{aspect-ratio:3/4}
+.r45{aspect-ratio:4/5}
+.hero2{display:grid;grid-template-columns:1.1fr .9fr;gap:34px;align-items:center}
+.goal{border-top:6px solid var(--line)}
+.goal.g1{border-top-color:var(--europe)}
+.goal.g2{border-top-color:var(--wf)}
+.goal.g3{border-top-color:var(--world)}
+.goal .big{font-size:34px;font-weight:900;letter-spacing:-.01em;margin:6px 0 2px}
+.goal .unit{font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--grey)}
+@media(max-width:900px){
+  .grid2,.grid3,.grid4,.hero2{grid-template-columns:1fr}
+  .slide{padding:56px 6vw 72px}
   .dots{display:none}
   .trow{grid-template-columns:1fr;gap:4px}
-  .tbl{font-size:13px}
-  .tbl td,.tbl th{padding:8px}
+  .tbl{font-size:13px}.tbl td,.tbl th{padding:8px}
+  .ghost{display:none}
 }
 </style>
 </head>
@@ -80,242 +92,331 @@ p.lead{font-size:clamp(17px,1.6vw,21px);line-height:1.55;color:var(--grey);max-w
 <div class="bar" id="bar"></div>
 <nav class="dots" id="dots"></nav>
 
-<!-- 1 · COVER -->
+<!-- 01 COVER -->
 <section class="slide" id="s1">
-  <div class="split"></div>
-  <div class="num">WORLDFIRST · CAMPAIGN CONCEPT · INTERNAL DRAFT V1</div>
+  <div class="num">WORLDFIRST UK · CAMPAIGN CONCEPT · DRAFT V2</div>
+  <div class="ghost">01</div>
   <div class="wrap">
-    <div class="kicker">A WorldFirst pre-match event · London · week before the big one</div>
-    <h1>THE<br>WARM-UP<span style="color:var(--wf)">.</span></h1>
-    <p class="lead" style="margin-top:22px">Every great tournament needs one. We hire a tennis legend, put them on a London court, and let our employees, clients and friends try to take <b>one point</b> off them. Our star. Our cast. Our story — perfectly timed to tee up tennis week.</p>
-    <div style="margin-top:26px">
-      <span class="chip blue">Team Europe energy</span>
-      <span class="chip red">Team World energy</span>
-      <span class="chip pink">100% WorldFirst rights</span>
+    <div class="hero2">
+      <div>
+        <div class="kicker">A WorldFirst event · London · one week before the Laver Cup</div>
+        <h1>THE<br>WARM-UP<span style="color:var(--wf)">.</span></h1>
+        <p class="lead" style="margin-top:20px">We hire a famous tennis player. We put them on a London court one week before the Laver Cup. Our employees, clients and friends each get <b>one point</b> to try to beat them. We film everything.</p>
+        <p class="lead" style="margin-top:12px">This gives the campaign real people and real stories — the things our Laver Cup rights don't include.</p>
+      </div>
+      <figure class="ph r34" data-id="V01"><span class="tag">V01 · DROP-IN</span><span class="cap">Cover hero — empty court at night, blue half / red half, one ball on the line</span></figure>
     </div>
-    <p class="foot">Builds on the team's One Point Slam mechanic + £100-FX prize idea + the "hire our own pro" call. Sanitized for link-sharing; fees are market estimates, not offers. · ↑↓ to navigate</p>
   </div>
+  <div class="strip"><span>The Warm-Up · WorldFirst UK</span><span>Visual slots V01–V13 = AI stills to drop in</span></div>
 </section>
 
-<!-- 2 · THE INSIGHT -->
+<!-- 02 WHY -->
 <section class="slide" id="s2">
-  <div class="num">02 · WHY THIS</div>
+  <div class="num">02 · WHY THIS IDEA</div>
+  <div class="ghost">02</div>
   <div class="wrap">
-    <div class="kicker">The insight</div>
-    <h2>The Laver Cup gives us a logo.<br>It doesn't give us characters.</h2>
+    <div class="kicker">The problem, and how this fixes it</div>
+    <h2>Our Laver Cup deal has no people in it.</h2>
     <div class="grid3">
       <div class="card">
-        <h3>The gap</h3>
-        <p>No player rights, no Alcaraz in the UK, no faces. Campaigns run on people — and our event package contains none.</p>
+        <span class="chip red">Problem</span>
+        <h3>No faces to build on</h3>
+        <p>Our rights: a logo, a booth, some tickets. No player images. No Alcaraz in the UK. Campaigns need people — we have none.</p>
       </div>
       <div class="card">
-        <h3>The fix</h3>
-        <p>Cast our own. One hired legend + our employees and clients as challengers. We own every face, every clip, every usage right — forever.</p>
+        <span class="chip blue">Fix</span>
+        <h3>Hire our own star</h3>
+        <p>We pay one well-known player directly. Their face, name and footage become ours to use — fully cleared, for a year.</p>
       </div>
       <div class="card">
-        <h3>The timing trick</h3>
-        <p>Stage it the week <b>before</b> the tournament. Clean of event-week restrictions, and the city's tennis buzz does our amplification for free. We are the warm-up act — and we say so.</p>
+        <span class="chip blue">Fix</span>
+        <h3>Hold it the week before</h3>
+        <p>Not during the tournament — one week earlier. No event restrictions apply, and London's tennis buzz amplifies us for free.</p>
       </div>
     </div>
-    <div class="bigline">The big match is <span class="eu">Europe</span> vs <span class="w">The World</span>.<br>Ours is <span class="pink">a legend vs. everyone else.</span></div>
+    <p class="lead" style="margin-top:26px"><b>One rule:</b> we never use the words "Laver Cup" in the creative. The timing, the city and the red-blue look make the connection for us — legally and cleanly.</p>
   </div>
+  <div class="strip"><span>The Warm-Up · WorldFirst UK</span><span>02</span></div>
 </section>
 
-<!-- 3 · THE FORMAT -->
+<!-- 03 FORMAT -->
 <section class="slide" id="s3">
-  <div class="num">03 · THE FORMAT</div>
+  <div class="num">03 · THE EVENT</div>
+  <div class="ghost">03</div>
   <div class="wrap">
-    <div class="kicker">The event · one court, one afternoon, one point</div>
-    <h2>One Point vs. The Legend.</h2>
-    <div class="grid2">
-      <div class="card">
-        <span class="chip grey">Run of show · ~3 hours</span>
-        <ul>
-          <li><b>The Arrival</b> — legend walks on, deadpan: "I've beaten Grand Slam players. Today, a CFO."</li>
-          <li><b>The Gauntlet</b> — everyone gets <b>one point</b> against the pro. Employees, clients, friends. 60–90 seconds per person, queue keeps moving.</li>
-          <li><b>The Tie</b> — mini team match: challengers drafted into <span style="color:var(--europe);font-weight:800">Blue</span> vs <span style="color:var(--world);font-weight:800">Red</span> squads, legend plays for both. Trophy for the winning side.</li>
-          <li><b>The Prize</b> — win your point: <b>£100 FX credit</b> (FCA sign-off; venue-only mechanic). Everyone: instant personal clip via QR.</li>
-        </ul>
+    <div class="kicker">One court · one afternoon · about 3 hours</div>
+    <h2>One point against a pro.</h2>
+    <div class="hero2">
+      <div>
+        <div class="card" style="margin-bottom:18px">
+          <span class="chip grey">How it runs</span>
+          <ul>
+            <li><b>1 — The arrival.</b> The player walks on. Short welcome, a bit of showmanship.</li>
+            <li><b>2 — The gauntlet.</b> Everyone gets one point against the pro. About 90 seconds per person, so 60+ people can play in an hour.</li>
+            <li><b>3 — The team match.</b> Guests split into a Blue team and a Red team for a short doubles tie. The pro plays a set for each side. Trophy for the winners.</li>
+            <li><b>4 — The prize.</b> Win your point → £100 of FX credit (needs compliance sign-off). Everyone gets their own video clip by QR code within minutes.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="chip grey">Why it works</span>
+          <p>One point is winnable enough that everyone tries. Every point is a ready-made 20-second video with a beginning, middle and end. Clients attend by private invitation, which keeps us inside the hospitality rules.</p>
+        </div>
       </div>
-      <div class="card">
-        <span class="chip grey">Why it works</span>
-        <ul>
-          <li><b>Democratic</b> — a 60-year-old client and a 24-year-old analyst have the same shot. One point is winnable enough to be irresistible.</li>
-          <li><b>Fast content</b> — every point is a self-contained 20-second clip with a natural arc: hope → destruction (or glory).</li>
-          <li><b>Client-friendly</b> — invite-only for customers = compliant hospitality, no public ticket promotion needed.</li>
-          <li><b>Repeatable</b> — works as an annual property. Year two books itself.</li>
-        </ul>
+      <div>
+        <figure class="ph r169" data-id="V06" style="margin-bottom:16px"><span class="tag">V06 · DROP-IN</span><span class="cap">Ball frozen above the net, office worker braced to return</span></figure>
+        <figure class="ph r169" data-id="V05"><span class="tag">V05 · DROP-IN</span><span class="cap">Clients laughing courtside, September light</span></figure>
       </div>
     </div>
   </div>
+  <div class="strip"><span>The Warm-Up · WorldFirst UK</span><span>03</span></div>
 </section>
 
-<!-- 4 · THE CAST -->
+<!-- 04 CAST -->
 <section class="slide dark" id="s4">
-  <div class="num">04 · THE CAST</div>
+  <div class="num">04 · THE PEOPLE</div>
+  <div class="ghost">04</div>
   <div class="wrap">
-    <div class="kicker">Characters — what the big event can't give us</div>
-    <h2 style="color:#fff">Four roles. Every one of them ours.</h2>
-    <div class="cast">
-      <div class="card"><div class="role">The Legend</div><p>The hired pro. Charming, lethal, contractually ours — face, name, and highlights usable across our channels all year.</p></div>
-      <div class="card"><div class="role">The Challengers</div><p>Our employees — the CFO, the intern, the sales director. Fight-night "tale of the tape" intro cards; training-montage teasers shot in the office.</p></div>
-      <div class="card"><div class="role">The Friends</div><p>Clients and ambassadors, invited quietly, filmed gloriously. Their companies become part of the story — Europe vs World seller framing carries through.</p></div>
-      <div class="card"><div class="role">The Commentator</div><p>Deadpan market-report voice-over: "The CFO opened strong but the position collapsed under volatility." Finance meets Wimbledon. Made for LinkedIn.</p></div>
+    <div class="kicker">Four roles — all of them ours to film</div>
+    <h2 style="color:#fff">The cast.</h2>
+    <div class="grid4">
+      <div>
+        <figure class="ph r34" data-id="V02" style="margin-bottom:12px"><span class="tag">V02</span><span class="cap">The pro, from behind, walking out of the tunnel</span></figure>
+        <h3>The Star</h3>
+        <p style="color:#B7BDC9;font-size:14px;line-height:1.6">The hired player. Charming on camera, ruthless on court. Contracted so we can use their face and name all year.</p>
+      </div>
+      <div>
+        <figure class="ph r34" data-id="V03" style="margin-bottom:12px"><span class="tag">V03</span><span class="cap">The CFO — boxing-poster portrait, blue background</span></figure>
+        <h3>The Challengers</h3>
+        <p style="color:#B7BDC9;font-size:14px;line-height:1.6">Our employees. Each gets a fight-night intro card and a mock training video before the event.</p>
+      </div>
+      <div>
+        <figure class="ph r34" data-id="V04" style="margin-bottom:12px"><span class="tag">V04</span><span class="cap">The analyst — same poster series, red background</span></figure>
+        <h3>The Friends</h3>
+        <p style="color:#B7BDC9;font-size:14px;line-height:1.6">Invited clients and partners. They play, they're filmed, their companies become part of the story.</p>
+      </div>
+      <div>
+        <figure class="ph r34" data-id="V07" style="margin-bottom:12px"><span class="tag">V07</span><span class="cap">The commentator at a courtside desk, vintage mic</span></figure>
+        <h3>The Commentator</h3>
+        <p style="color:#B7BDC9;font-size:14px;line-height:1.6">A dry, financial-news-style voice-over on every clip: "The CFO opened strong. The position collapsed."</p>
+      </div>
     </div>
-    <p class="lead" style="margin-top:26px">This cast powers three weeks of content before a single ball is hit at the O2 — and every asset is a WorldFirst asset, forever.</p>
   </div>
+  <div class="strip"><span>The Warm-Up · WorldFirst UK</span><span>04</span></div>
 </section>
 
-<!-- 5 · THE TALENT -->
+<!-- 05 TALENT -->
 <section class="slide" id="s5">
-  <div class="num">05 · THE TALENT</div>
+  <div class="num">05 · THE STAR, PRICED</div>
+  <div class="ghost">05</div>
   <div class="wrap">
-    <div class="kicker">Who we hire — market fee estimates, agency quotes to confirm</div>
-    <h2>The star, priced.</h2>
+    <div class="kicker">Fee estimates only — real numbers come from agency quotes</div>
+    <h2>Who we hire, and what it costs.</h2>
     <table class="tbl">
-      <tr><th>Route</th><th>Profile (illustrative)</th><th>Est. day fee*</th><th>Read</th></tr>
-      <tr class="rec"><td>British legend ✦</td><td>Tim Henman tier — Mr. British Tennis, universally loved, brilliant with crowds</td><td>£15–30k</td><td><b>Recommended.</b> Max recognition per pound; retired = zero schedule or event conflicts</td></tr>
-      <tr class="rec"><td>The serve gimmick ✦</td><td>Greg Rusedski tier — once the fastest serve on earth</td><td>£10–20k</td><td><b>Co-recommended.</b> "Face the fastest serve in British history" is the mechanic, monetised</td></tr>
-      <tr><td>Recent WTA name</td><td>Johanna Konta / Laura Robson tier — recent, relatable, broadcast-polished</td><td>£8–20k</td><td>Strong female-lead option; pair with a legend for a two-star cast</td></tr>
-      <tr><td>Active British pro</td><td>Dan Evans / Cam Norrie tier</td><td>£20–50k</td><td>Active-tour credibility, but schedule risk + tournament commitments</td></tr>
-      <tr><td>The dream tier</td><td>Andy Murray</td><td>£100k+</td><td>National-event energy; only if leadership wants a flagship PR moment</td></tr>
+      <tr><th>Option</th><th>Profile (examples of the tier)</th><th>Est. fee for one day*</th><th>Notes</th></tr>
+      <tr class="rec"><td>British legend ✦</td><td>Tim Henman tier — retired, universally known in the UK, great with a crowd</td><td>£15–30k</td><td><b>Recommended.</b> Best recognition per pound. No schedule conflicts.</td></tr>
+      <tr class="rec"><td>Big-serve legend ✦</td><td>Greg Rusedski tier — once the fastest serve in the world</td><td>£10–20k</td><td><b>Also recommended.</b> "Face the fastest serve in British history" sells itself.</td></tr>
+      <tr><td>Recent women's star</td><td>Johanna Konta / Laura Robson tier</td><td>£8–20k</td><td>Strong option; pair with a legend for a two-star event.</td></tr>
+      <tr><td>Current British pro</td><td>Dan Evans / Cam Norrie tier</td><td>£20–50k</td><td>Active-tour credibility, but training schedules make dates risky.</td></tr>
+      <tr><td>The dream</td><td>Andy Murray</td><td>£100k+</td><td>National-news level. Only if leadership wants a flagship moment.</td></tr>
     </table>
-    <p class="note">*Estimates for one appearance day + organic social/web usage (12 months, UK), based on market norms. Add ~10–20% agency fee. Paid-media usage rights raise fees materially. Final numbers only via agency RFQ (IMG/CAA-type). Diligence per candidate: no financial-services sponsor conflict, clean profile, availability Sept 14–19.</p>
-    <p class="lead" style="margin-top:16px"><b>Two-star option:</b> a legend + a recent WTA name (~£25–45k combined) gives us duelling captains for the Red/Blue tie and doubles the content angles.</p>
+    <p class="foot">*One appearance day + 12 months of use on our own social and web channels (UK). Add 10–20% agency fee. Using the footage in paid ads costs more. Before signing anyone we check: no existing sponsorship with another payments/finance brand, clean public profile, free on the target date.<br><b>Two-star option:</b> one legend + one recent women's star ≈ £25–45k total — gives the Blue and Red teams a captain each and doubles the content.</p>
   </div>
+  <div class="strip"><span>The Warm-Up · WorldFirst UK</span><span>05</span></div>
 </section>
 
-<!-- 6 · THE VENUE -->
+<!-- 06 VENUE -->
 <section class="slide" id="s6">
-  <div class="num">06 · THE VENUE</div>
+  <div class="num">06 · THE PLACE</div>
+  <div class="ghost">06</div>
   <div class="wrap">
-    <div class="kicker">One court, in or around London · half-day hire + shoot</div>
-    <h2>Small court. Big frame.</h2>
+    <div class="kicker">One court, half a day, in or near London</div>
+    <h2>Three venue options.</h2>
     <div class="grid3">
-      <div class="card">
-        <span class="chip blue">Premium optics</span>
-        <h3>The Queen's Club tier</h3>
-        <p>Storied grass/indoor courts, instant prestige in every frame. Est. £3–8k half-day incl. facilities. The "money shot" venue for a legend.</p>
+      <div>
+        <figure class="ph r169" data-id="V09" style="margin-bottom:12px"><span class="tag">V09</span><span class="cap">Classic English grass club, ivy clubhouse</span></figure>
+        <h3>A · The classic club</h3>
+        <p style="color:var(--grey);font-size:14.5px;line-height:1.6">Old, beautiful, instantly premium on camera. Est. £3–8k for a half day.</p>
       </div>
-      <div class="card">
-        <span class="chip grey">Practical & flexible</span>
-        <h3>National Tennis Centre tier</h3>
-        <p>Roehampton — pro-grade indoor courts, filming-friendly, weatherproof, easy crew logistics. Est. £2–5k.</p>
+      <div>
+        <figure class="ph r169" data-id="V10" style="margin-bottom:12px"><span class="tag">V10</span><span class="cap">Modern indoor centre, blue courts, blank red/blue banners</span></figure>
+        <h3>B · The indoor centre</h3>
+        <p style="color:var(--grey);font-size:14.5px;line-height:1.6">Weatherproof, easy for filming and logistics. Est. £2–5k. The safe choice.</p>
       </div>
-      <div class="card">
-        <span class="chip red">Urban energy</span>
-        <h3>Docklands / Canary Wharf court</h3>
-        <p>City-skyline backdrop steps from the office — clients walk over, skyline sells "London home turf". Est. £1–4k + dressing.</p>
+      <div>
+        <figure class="ph r169" data-id="V11" style="margin-bottom:12px"><span class="tag">V11</span><span class="cap">Docklands court, Canary Wharf skyline at dusk</span></figure>
+        <h3>C · The skyline court</h3>
+        <p style="color:var(--grey);font-size:14.5px;line-height:1.6">City backdrop, minutes from the office — clients can walk over. Est. £1–4k plus dressing.</p>
       </div>
     </div>
-    <p class="lead" style="margin-top:22px">Recommendation: <b>indoor or covered option held as weather backup regardless of choice</b> — it's London, in September, and we have one afternoon.</p>
+    <p class="lead" style="margin-top:24px">Whichever we pick: <b>book an indoor backup.</b> It's London in September and we have one afternoon.</p>
   </div>
+  <div class="strip"><span>The Warm-Up · WorldFirst UK</span><span>06</span></div>
 </section>
 
-<!-- 7 · CONTENT ENGINE -->
+<!-- 07 CONTENT -->
 <section class="slide" id="s7">
-  <div class="num">07 · CONTENT</div>
+  <div class="num">07 · THE CONTENT</div>
+  <div class="ghost">07</div>
   <div class="wrap">
-    <div class="kicker">Three weeks of story from one afternoon</div>
-    <h2>Shoot once. Publish for a month.</h2>
+    <div class="kicker">Shoot one afternoon, publish for a month</div>
+    <h2>Three weeks of content from one day.</h2>
     <div class="grid3">
       <div class="card">
         <span class="chip blue">Before · Sept 1–14</span>
         <ul>
-          <li>Challenger reveal cards — fight-night "tale of the tape" for the CFO, the intern, the client</li>
-          <li>Office training montages (deliberately terrible)</li>
-          <li>Legend announcement post: "We hired backup."</li>
+          <li>Announcement post: "We hired backup."</li>
+          <li>Challenger intro cards — fight-poster portraits of the CFO, the analyst, invited clients (V03/V04 style)</li>
+          <li>Mock training videos in the office (M04)</li>
         </ul>
       </div>
       <div class="card">
-        <span class="chip pink">The day · ~Sept 16</span>
+        <span class="chip pink">Event day · ~Sept 16</span>
         <ul>
-          <li>Every point filmed; QR instant clips → participants post themselves</li>
-          <li>Hero film captured (60–90s) + 15s cutdowns</li>
-          <li>Client hospitality woven in — lunch, meet-the-legend photos (our star, our rights)</li>
+          <li>Every point filmed; players get their clip by QR within minutes and post it themselves</li>
+          <li>A 60–90 second main film + 15-second cuts</li>
+          <li>Client photos with the star — our star, our rights, no restrictions</li>
         </ul>
       </div>
       <div class="card">
         <span class="chip red">After · into tennis week</span>
         <ul>
-          <li>Hero film drops as London's tennis week begins: <i>"The warm-up is over. The real match starts now."</i></li>
-          <li>Deadpan Market Commentary recaps ride the tournament buzz</li>
-          <li>Assets feed the OOH/booth campaign and live on the website all year</li>
+          <li>Main film releases as London tennis week starts: "The warm-up is over."</li>
+          <li>Commentator recaps run all tournament week</li>
+          <li>Footage feeds our OOH, the O2 booth screens, the website and sales decks all year</li>
         </ul>
       </div>
     </div>
-    <p class="lead" style="margin-top:22px">The tee-up is <b>atmospheric, never claimed</b> — timing, red/blue, London. No event marks, no player references, nothing for a lawyer to underline.</p>
+    <div class="grid2" style="margin-top:18px">
+      <figure class="ph r169" data-id="V08"><span class="tag">V08 · DROP-IN</span><span class="cap">Hand holding phone with rally clip — the QR share moment</span></figure>
+      <figure class="ph r169" data-id="V12"><span class="tag">V12 · DROP-IN</span><span class="cap">The O2 across the Thames at dusk — "tennis week arrives"</span></figure>
+    </div>
   </div>
+  <div class="strip"><span>The Warm-Up · WorldFirst UK</span><span>07</span></div>
 </section>
 
-<!-- 8 · TIMELINE -->
-<section class="slide" id="s8">
-  <div class="num">08 · TIMELINE</div>
+<!-- 08 GOALS -->
+<section class="slide dark" id="s8">
+  <div class="num">08 · GOALS &amp; REPORTING</div>
+  <div class="ghost">08</div>
+  <div class="wrap">
+    <div class="kicker">What WorldFirst UK gets — and how we report it internally</div>
+    <h2 style="color:#fff">Three goals. Numbers first, noise second.</h2>
+    <div class="grid3">
+      <div class="card goal g1">
+        <span class="chip blue">Goal 1 · Awareness</span>
+        <h3>More of the UK knows WorldFirst</h3>
+        <div class="big" style="color:#7FA3E8">5M+</div>
+        <div class="unit">campaign impressions (draft)</div>
+        <ul>
+          <li>UK share of voice during tennis week vs. September baseline</li>
+          <li>Branded search uplift in the UK</li>
+          <li>Main film views + clip reach</li>
+        </ul>
+      </div>
+      <div class="card goal g2">
+        <span class="chip pink">Goal 2 · Engagement</span>
+        <h3>Clients feel closer to us</h3>
+        <div class="big" style="color:#FF7D95">80–120</div>
+        <div class="unit">clients &amp; prospects hosted (draft)</div>
+        <ul>
+          <li>Guests who attend and play</li>
+          <li>Guests who post their own clip (target: 50%+)</li>
+          <li>Follow-up meeting booked within 72 hours for every hosted client</li>
+        </ul>
+      </div>
+      <div class="card goal g3">
+        <span class="chip red">Goal 3 · New revenue</span>
+        <h3>New customers, new money</h3>
+        <div class="big" style="color:#F08A8A">90-day</div>
+        <div class="unit">new-revenue attribution window</div>
+        <ul>
+          <li>Leads and account sign-ups from the campaign</li>
+          <li>New-customer revenue attributed within 90 days — <b>the primary commercial measure</b></li>
+          <li>NFM tracked internally as the secondary metric</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card" style="margin-top:18px">
+      <span class="chip draft">Alignment note</span>
+      <p>This mirrors how the team has agreed to be measured: <b>new-customer revenue as the headline target</b> (co-owned with the commercial/KA teams), NFM as the internal secondary metric, and leadership's standing rule that <b>every hospitality seat is reported on business return, not attendance</b>. Report lands in the standard format: business results first, then reach numbers. Draft targets to be agreed with commercial before the plan ships.</p>
+    </div>
+  </div>
+  <div class="strip"><span>The Warm-Up · WorldFirst UK</span><span>08</span></div>
+</section>
+
+<!-- 09 TIMELINE -->
+<section class="slide" id="s9">
+  <div class="num">09 · TIMELINE</div>
+  <div class="ghost">09</div>
   <div class="wrap">
     <div class="kicker">Ten weeks out</div>
-    <h2>Book the legend before the legend books August.</h2>
+    <h2>Book the star before Europe goes on holiday.</h2>
     <div>
-      <div class="trow"><div class="when">Jul 14–18</div><div class="what"><b>Agency RFQ out</b> (brief below) · venue holds placed · Daniel/Serena sanity-check on linkage + rights · FCA question raised on £100 FX prize.</div></div>
-      <div class="trow"><div class="when">By Jul 31</div><div class="what"><span class="hot">Hard deadline:</span> talent shortlist + client invite list locked — <b>Europe disappears in August.</b></div></div>
-      <div class="trow"><div class="when">August</div><div class="what">Contract signed · venue confirmed · production booked · challenger cast chosen · content templates built.</div></div>
-      <div class="trow"><div class="when">Sept 1–14</div><div class="what">Teaser content live · reveal cards · legend announcement.</div></div>
-      <div class="trow"><div class="when">~Sept 16</div><div class="what"><b>THE WARM-UP</b> — one court, one afternoon, every point filmed.</div></div>
-      <div class="trow"><div class="when">Sept 19 →</div><div class="what">Hero film + cutdowns roll into tennis week · assets feed OOH, booth and social · 72-hour client follow-ups.</div></div>
+      <div class="trow"><div class="when">Jul 14–18</div><div class="what"><b>Send the agency brief</b> (below) · place venue holds · check the idea with the sports-sponsorship team · raise the £100-FX prize with compliance.</div></div>
+      <div class="trow"><div class="when">By Jul 31</div><div class="what"><span class="hot">Hard deadline:</span> shortlist the player and lock the client invite list. <b>Decision-makers across Europe are away in August.</b></div></div>
+      <div class="trow"><div class="when">August</div><div class="what">Sign the contract · confirm the venue · book production · choose the employee challengers · build the content templates.</div></div>
+      <div class="trow"><div class="when">Sept 1–14</div><div class="what">Teasers go live: announcement, intro cards, training videos.</div></div>
+      <div class="trow"><div class="when">~Sept 16</div><div class="what"><b>THE WARM-UP.</b> One court, one afternoon, every point filmed.</div></div>
+      <div class="trow"><div class="when">Sept 19 →</div><div class="what">Main film out as tennis week starts · commentator recaps all week · client follow-ups within 72 hours · 90-day revenue tracking begins.</div></div>
     </div>
   </div>
+  <div class="strip"><span>The Warm-Up · WorldFirst UK</span><span>09</span></div>
 </section>
 
-<!-- 9 · BUDGET -->
-<section class="slide" id="s9">
-  <div class="num">09 · BUDGET</div>
+<!-- 10 BUDGET -->
+<section class="slide" id="s10">
+  <div class="num">10 · BUDGET</div>
+  <div class="ghost">10</div>
   <div class="wrap">
-    <div class="kicker">Indicative bands — pending quotes</div>
-    <h2>Three ways to size it.</h2>
+    <div class="kicker">Rough bands — quotes will sharpen them</div>
+    <h2>Three sizes.</h2>
     <table class="tbl">
-      <tr><th>Line</th><th>Lean</th><th>Standard ✦</th><th>Flagship</th></tr>
-      <tr><td>Talent (day + organic usage)</td><td>£10–20k</td><td>£25–45k (two-star)</td><td>£100k+ (Murray tier)</td></tr>
+      <tr><th>Cost line</th><th>Lean</th><th>Standard ✦</th><th>Flagship</th></tr>
+      <tr><td>Player (day + 12-month organic use)</td><td>£10–20k</td><td>£25–45k (two stars)</td><td>£100k+ (Murray tier)</td></tr>
       <tr><td>Venue + dressing</td><td>£2–4k</td><td>£4–8k</td><td>£8–15k</td></tr>
-      <tr><td>Production (crew, edit, QR clip system)</td><td>£12–18k</td><td>£18–30k</td><td>£40–60k</td></tr>
-      <tr><td>Prizes (£100 FX credits) + gifts</td><td>£3–5k</td><td>£5–8k</td><td>£10k</td></tr>
-      <tr><td>Hospitality (client catering, transport)</td><td>£2–4k</td><td>£5–10k</td><td>£15k+</td></tr>
+      <tr><td>Production (crew, edit, QR clips)</td><td>£12–18k</td><td>£18–30k</td><td>£40–60k</td></tr>
+      <tr><td>Prizes + gifts</td><td>£3–5k</td><td>£5–8k</td><td>£10k</td></tr>
+      <tr><td>Client hospitality</td><td>£2–4k</td><td>£5–10k</td><td>£15k+</td></tr>
       <tr><td><b>Total</b></td><td><b>~£30–50k</b></td><td><b>~£60–100k</b></td><td><b>~£175k+</b></td></tr>
     </table>
-    <p class="note">Standard band recommended: two-star cast, premium venue, full content engine. Compare: one mid-tier OOH site in London for two weeks can cost more than the entire Lean event — and this produces assets we own forever.</p>
+    <p class="foot">For scale: two weeks on one mid-size London billboard can cost more than the whole Lean version — and this produces footage we own and reuse for a year.</p>
   </div>
+  <div class="strip"><span>The Warm-Up · WorldFirst UK</span><span>10</span></div>
 </section>
 
-<!-- 10 · GUARDRAILS & NEXT -->
-<section class="slide dark" id="s10">
-  <div class="num">10 · GUARDRAILS &amp; NEXT STEPS</div>
+<!-- 11 RULES & NEXT -->
+<section class="slide dark" id="s11">
+  <div class="num">11 · RULES &amp; NEXT STEPS</div>
+  <div class="ghost">11</div>
   <div class="wrap">
-    <div class="kicker">Keep it clean · make it happen</div>
-    <h2 style="color:#fff">Nothing to underline. Everything to sign.</h2>
+    <div class="kicker">Stay clean · move fast</div>
+    <h2 style="color:#fff">The rules, and what happens next.</h2>
     <div class="grid2">
       <div class="card">
-        <h3>Guardrails</h3>
+        <h3>Rules we follow</h3>
         <ul>
-          <li>No event marks, no "Laver" in any creative — the talent is "a tennis legend", the timing does the rest</li>
-          <li>Talent diligence: <b>no financial-services sponsor conflicts</b>, clean profile, media-trained</li>
-          <li>£100 FX prize = financial promotion → <b>FCA/compliance sign-off first</b></li>
-          <li>Client attendance = invite-only hospitality (to-B; no public ticket mechanics)</li>
-          <li>Filming releases for every participant; usage rights written into the talent contract (12-month organic, UK+global social)</li>
-          <li>Run past sports-sponsorship team (linkage check) before the agency brief goes out</li>
+          <li>Never say "Laver Cup" in our creative. The player is "a British tennis legend". Timing does the rest.</li>
+          <li>Check the player has no deal with another payments or banking brand before we sign.</li>
+          <li>£100 FX credit is a financial promotion → compliance sign-off before launch.</li>
+          <li>Clients attend by private invitation only — no public ticket giveaways.</li>
+          <li>Everyone on camera signs a filming release. Usage rights written into the player's contract.</li>
+          <li>Show the plan to the sports-sponsorship team before the agency brief goes out.</li>
         </ul>
       </div>
       <div class="card">
-        <h3>Measure</h3>
+        <h3>The agency brief — ready to send</h3>
+        <p style="font-size:14.5px;line-height:1.7">"UK fintech seeks a well-known British tennis name (retired preferred) for one London appearance day around 16 September: playing one-point challenges against staff and guests, light filming, 12 months' use on our own channels. No conflicts with payments/banking sponsors. Budget £10–45k depending on profile. Please send options, fees and availability by 25 July."</p>
+        <h3 style="margin-top:18px">Decisions needed this week</h3>
         <ul>
-          <li>Content: hero film + cutdown reach, participant UGC posts, QR clips claimed</li>
-          <li>Clients: attendees → meetings booked inside 72 hours → pipeline attributed</li>
-          <li>Brand: UK social share-of-voice during tennis week vs. baseline</li>
-          <li>Legacy: assets re-used across web, decks, office screens over 12 months</li>
+          <li>Approve concept + budget band (Lean / Standard / Flagship)</li>
+          <li>Confirm the date window (~Sept 16)</li>
+          <li>Name the owner for the client invite list</li>
         </ul>
-        <h3 style="margin-top:18px">The agency brief (send this)</h3>
-        <p style="font-size:14px">"UK fintech seeks beloved British tennis name (retired preferred) for one London appearance day, ~Sept 16: plays one-point challenges vs. staff and guests, light content capture, 12-month organic usage. No financial-services conflicts. Budget band £10–45k depending on profile. Quotes + availability by Jul 25."</p>
       </div>
     </div>
-    <p class="foot" style="color:#5B6472">THE WARM-UP · WorldFirst pre-match campaign concept v1 · builds on the team's One Point Slam + prize mechanics · fees are market estimates pending agency quotes</p>
+    <p class="foot" style="color:#5B6472">THE WARM-UP · WorldFirst UK · draft v2 · built on the team's One-Point-Slam and prize ideas · fees are estimates until agencies quote · visual slots V01–V13 ready for AI stills</p>
   </div>
+  <div class="strip"><span>The Warm-Up · WorldFirst UK</span><span>11 · END</span></div>
 </section>
 
 <script>
