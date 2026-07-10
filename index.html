@@ -72,6 +72,11 @@ p.lead{font-size:clamp(17px,1.55vw,20px);line-height:1.6;color:var(--grey);max-w
 .r34{aspect-ratio:3/4}
 .r45{aspect-ratio:4/5}
 .hero2{display:grid;grid-template-columns:1.1fr .9fr;gap:34px;align-items:center}
+.face{width:44px;height:44px;border-radius:50%;object-fit:cover;flex:0 0 44px;background:#E6E8EC}
+.tcell{display:flex;align-items:center;gap:12px}
+.faces{display:flex;gap:6px}
+.wikilink{font-size:10.5px;font-weight:800;letter-spacing:.08em;color:var(--europe);text-decoration:none;border-bottom:1.5px solid #B9CCEB;white-space:nowrap}
+.wikilink:hover{color:var(--wf);border-bottom-color:var(--wf)}
 .goal .big{font-size:34px;font-weight:900;letter-spacing:-.01em;margin:6px 0 2px}
 .goal .unit{font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--grey)}
 @media(max-width:900px){
@@ -150,7 +155,8 @@ p.lead{font-size:clamp(17px,1.55vw,20px);line-height:1.6;color:var(--grey);max-w
             <li><b>1 — The arrival.</b> The player walks on. Short welcome, a bit of showmanship.</li>
             <li><b>2 — The gauntlet.</b> Everyone gets one point against the pro. About 90 seconds per person, so 60+ people can play in an hour.</li>
             <li><b>3 — The team match.</b> Guests split into a Blue team and a Red team for a short doubles tie. The pro plays a set for each side. Trophy for the winners.</li>
-            <li><b>4 — The prize.</b> Win your point → £100 of FX credit (needs compliance sign-off). Everyone gets their own video clip by QR code within minutes.</li>
+            <li><b>4 — The prizes.</b> Everyone gets their own video clip by QR code within minutes. Win your point → £100 of FX credit (compliance sign-off needed) + entry into the grand draw.</li>
+            <li><b>5 — The grand draw.</b> On court at the end: <b>Laver Cup hospitality tickets</b> for the weekend, and <b>a gift signed by Carlos Alcaraz</b>. Drawn inside our private event — that keeps it within the ticket rules.</li>
           </ul>
         </div>
         <div class="card">
@@ -209,13 +215,13 @@ p.lead{font-size:clamp(17px,1.55vw,20px);line-height:1.6;color:var(--grey);max-w
     <h2>Who we hire, and what it costs.</h2>
     <table class="tbl">
       <tr><th>Option</th><th>Profile (examples of the tier)</th><th>Est. fee for one day*</th><th>Notes</th></tr>
-      <tr class="rec"><td>British legend ✦</td><td>Tim Henman tier — retired, universally known in the UK, great with a crowd</td><td>£15–30k</td><td><b>Recommended.</b> Best recognition per pound. No schedule conflicts.</td></tr>
-      <tr class="rec"><td>Big-serve legend ✦</td><td>Greg Rusedski tier — once the fastest serve in the world</td><td>£10–20k</td><td><b>Also recommended.</b> "Face the fastest serve in British history" sells itself.</td></tr>
-      <tr><td>Recent women's star</td><td>Johanna Konta / Laura Robson tier</td><td>£8–20k</td><td>Strong option; pair with a legend for a two-star event.</td></tr>
-      <tr><td>Current British pro</td><td>Dan Evans / Cam Norrie tier</td><td>£20–50k</td><td>Active-tour credibility, but training schedules make dates risky.</td></tr>
-      <tr><td>The dream</td><td>Andy Murray</td><td>£100k+</td><td>National-news level. Only if leadership wants a flagship moment.</td></tr>
+      <tr class="rec"><td>British legend ✦</td><td><div class="tcell"><img class="face" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Tim_Henman_2006_Australian_Open.JPG/330px-Tim_Henman_2006_Australian_Open.JPG" alt="Tim Henman" onerror="this.style.display='none'"><span><b>Tim Henman</b> — retired, universally known in the UK, great with a crowd · <a class="wikilink" href="https://en.wikipedia.org/wiki/Tim_Henman" target="_blank" rel="noopener">WIKI ↗</a></span></div></td><td>£15–30k</td><td><b>Recommended.</b> Best recognition per pound. No schedule conflicts.</td></tr>
+      <tr class="rec"><td>Big-serve legend ✦</td><td><div class="tcell"><img class="face" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Greg_Rusedski_2014.jpg/330px-Greg_Rusedski_2014.jpg" alt="Greg Rusedski" onerror="this.style.display='none'"><span><b>Greg Rusedski</b> — once the fastest serve in the world · <a class="wikilink" href="https://en.wikipedia.org/wiki/Greg_Rusedski" target="_blank" rel="noopener">WIKI ↗</a></span></div></td><td>£10–20k</td><td><b>Also recommended.</b> "Face the fastest serve in British history" sells itself.</td></tr>
+      <tr><td>Recent women's star</td><td><div class="tcell"><span class="faces"><img class="face" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Konta_RG19_%2829%29_%2848199186357%29.jpg/330px-Konta_RG19_%2829%29_%2848199186357%29.jpg" alt="Johanna Konta" onerror="this.style.display='none'"><img class="face" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Robson_WM17_%285%29_%2835793473560%29.jpg/330px-Robson_WM17_%285%29_%2835793473560%29.jpg" alt="Laura Robson" onerror="this.style.display='none'"></span><span><b>Johanna Konta</b> <a class="wikilink" href="https://en.wikipedia.org/wiki/Johanna_Konta" target="_blank" rel="noopener">WIKI ↗</a> / <b>Laura Robson</b> <a class="wikilink" href="https://en.wikipedia.org/wiki/Laura_Robson" target="_blank" rel="noopener">WIKI ↗</a></span></div></td><td>£8–20k</td><td>Strong option; pair with a legend for a two-star event.</td></tr>
+      <tr><td>Current British pro</td><td><div class="tcell"><span class="faces"><img class="face" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Dan_Evans_%282023_DC_Open%29_02_%28cropped2%29.jpg/330px-Dan_Evans_%282023_DC_Open%29_02_%28cropped2%29.jpg" alt="Dan Evans" onerror="this.style.display='none'"><img class="face" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Norrie_MCM23_%2817%29_%2852883520940%29.jpg/330px-Norrie_MCM23_%2817%29_%2852883520940%29.jpg" alt="Cameron Norrie" onerror="this.style.display='none'"></span><span><b>Dan Evans</b> <a class="wikilink" href="https://en.wikipedia.org/wiki/Dan_Evans_(tennis)" target="_blank" rel="noopener">WIKI ↗</a> / <b>Cam Norrie</b> <a class="wikilink" href="https://en.wikipedia.org/wiki/Cameron_Norrie" target="_blank" rel="noopener">WIKI ↗</a></span></div></td><td>£20–50k</td><td>Active-tour credibility, but training schedules make dates risky.</td></tr>
+      <tr><td>The dream</td><td><div class="tcell"><img class="face" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/2015_Australian_Open_-_Andy_Murray_12_%28cropped%29.jpg/330px-2015_Australian_Open_-_Andy_Murray_12_%28cropped%29.jpg" alt="Andy Murray" onerror="this.style.display='none'"><span><b>Andy Murray</b> · <a class="wikilink" href="https://en.wikipedia.org/wiki/Andy_Murray" target="_blank" rel="noopener">WIKI ↗</a></span></div></td><td>£100k+</td><td>National-news level. Only if leadership wants a flagship moment.</td></tr>
     </table>
-    <p class="foot">*One appearance day + 12 months of use on our own social and web channels (UK). Add 10–20% agency fee. Using the footage in paid ads costs more. Before signing anyone we check: no existing sponsorship with another payments/finance brand, clean public profile, free on the target date.<br><b>Two-star option:</b> one legend + one recent women's star ≈ £25–45k total — gives the Blue and Red teams a captain each and doubles the content.</p>
+    <p class="foot">*One appearance day + 12 months of use on our own social and web channels (UK). Add 10–20% agency fee. Using the footage in paid ads costs more. Before signing anyone we check: no existing sponsorship with another payments/finance brand, clean public profile, free on the target date.<br><b>Two-star option:</b> one legend + one recent women's star ≈ £25–45k total — gives the Blue and Red teams a captain each and doubles the content.<br>Named players are examples of each tier, not confirmed targets. Profile photos and links: Wikipedia / Wikimedia Commons.</p>
   </div>
   <div class="strip"><span>The Warm-Up · WorldFirst UK</span><span>05</span></div>
 </section>
@@ -288,6 +294,35 @@ p.lead{font-size:clamp(17px,1.55vw,20px);line-height:1.6;color:var(--grey);max-w
     </div>
   </div>
   <div class="strip"><span>The Warm-Up · WorldFirst UK</span><span>07</span></div>
+</section>
+
+<!-- 07B AMPLIFICATION -->
+<section class="slide" id="s7b">
+  <div class="num">07·B · AMPLIFICATION</div>
+  <div class="ghost">7B</div>
+  <div class="wrap">
+    <div class="kicker">Voices that carry this beyond our own channels</div>
+    <h2>Three megaphones on the court.</h2>
+    <div class="grid3">
+      <div class="card">
+        <span class="chip blue">The star's voice</span>
+        <h3>The player amplifies us</h3>
+        <p>A Henman-tier name brings national recognition and broadcast relationships. We write <b>one post on the player's own channels</b> into the contract, and we invite their media contacts to the court.</p>
+      </div>
+      <div class="card">
+        <span class="chip pink">KOLs on court</span>
+        <h3>Creators play the gauntlet</h3>
+        <p>We invite UK business and sport creators to take their one point — losing to a legend IS the content. They post their own clips to their own audiences. We also buy them O2 tickets for tennis-week follow-up content.</p>
+      </div>
+      <div class="card">
+        <span class="chip red">Brand ambassadors</span>
+        <h3>Clients with a voice</h3>
+        <p>Our brand-ambassador clients get court time, a photo with the star, and first priority in the grand draw. PR builds a story around the flagship ambassador — their networks are exactly our buyer audience.</p>
+      </div>
+    </div>
+    <p class="lead" style="margin-top:24px">Every guest leaves holding ready-made content: their clip, their photo with the star, their intro card. Amplification is built into the event, not bolted on afterwards.</p>
+  </div>
+  <div class="strip"><span>The Warm-Up · WorldFirst UK</span><span>07·B</span></div>
 </section>
 
 <!-- 08 GOALS -->
@@ -394,7 +429,8 @@ p.lead{font-size:clamp(17px,1.55vw,20px);line-height:1.6;color:var(--grey);max-w
           <li>Never say "Laver Cup" in our creative. The player is "a British tennis legend". Timing does the rest.</li>
           <li>Check the player has no deal with another payments or banking brand before we sign.</li>
           <li>£100 FX credit is a financial promotion → compliance sign-off before launch.</li>
-          <li>Clients attend by private invitation only — no public ticket giveaways.</li>
+          <li>Clients attend by private invitation only. Laver Cup tickets may be prizes <b>inside</b> the closed event — never in public marketing.</li>
+          <li>Signed Alcaraz gift: request through ANI now — quantities are tiny and the agent must approve.</li>
           <li>Everyone on camera signs a filming release. Usage rights written into the player's contract.</li>
           <li>Show the plan to the sports-sponsorship team before the agency brief goes out.</li>
         </ul>
