@@ -80,15 +80,18 @@ figure.pic{border-radius:18px;overflow:hidden;position:relative;background:#0E16
 .sitenav{position:fixed;top:14px;left:14px;z-index:80;display:flex;gap:8px}
 .sitenav a{font-size:10.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding:7px 13px;border-radius:100px;text-decoration:none;background:rgba(11,18,32,.85);color:#fff;border:1px solid rgba(255,255,255,.18)}
 .sitenav a:hover{background:var(--wf)}
-/* explicit date banners */
-.datebar{display:inline-flex;align-items:center;gap:12px;font-weight:900;letter-spacing:.06em;border:2.5px solid;border-radius:14px;padding:12px 18px;margin:4px 0 18px;font-size:clamp(15px,1.6vw,20px);line-height:1.25;text-transform:uppercase}
-.datebar small{display:block;font-size:.62em;font-weight:800;letter-spacing:.18em;opacity:.75}
-.datebar.red{border-color:var(--world);color:var(--world);background:#FBEAEA}
-.datebar.blue{border-color:var(--europe);color:var(--europe);background:#E8EFFB}
-.dark .datebar.red{background:rgba(200,16,46,.14);color:#FF8FA0;border-color:#FF8FA0}
-.dark .datebar.blue{background:rgba(0,61,165,.18);color:#7FA3E8;border-color:#7FA3E8}
-.gdate{display:inline-block;font-size:clamp(14px,1.4vw,18px);font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:#fff;border:2px solid rgba(255,255,255,.5);border-radius:12px;padding:10px 16px;margin-bottom:18px}
-.gdate small{display:block;font-size:.68em;font-weight:800;letter-spacing:.16em;opacity:.75}
+/* explicit dates — pure typography, no boxes */
+.dateline{font-size:clamp(18px,1.9vw,24px);font-weight:600;line-height:1.45;color:var(--grey);margin:14px 0 4px;max-width:58ch}
+.dateline b{font-weight:900;letter-spacing:-.01em}
+.dateline.red b{color:var(--world)}
+.dateline.blue b{color:var(--europe)}
+.dark .dateline{color:#8B93A1}
+.dark .dateline.red b{color:#FF8FA0}
+.dark .dateline.blue b{color:#7FA3E8}
+.gdate{font-size:clamp(16px,1.6vw,21px);font-weight:900;letter-spacing:.1em;text-transform:uppercase;color:#fff;margin-bottom:16px;line-height:1.3}
+.gdate span{display:block;font-size:.66em;letter-spacing:.24em;font-weight:800;margin-top:6px}
+.p1 .gdate span{color:#FF8FA0}
+.p2 .gdate span{color:#7FA3E8}
 /* split gate landing */
 .gate{display:flex;min-height:100vh;background:var(--ink)}
 .gate a.half{flex:1;display:flex;align-items:center;justify-content:center;text-decoration:none;position:relative;overflow:hidden;transition:flex .45s cubic-bezier(.22,.61,.36,1)}
